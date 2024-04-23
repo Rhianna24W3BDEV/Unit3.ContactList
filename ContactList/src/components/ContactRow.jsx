@@ -1,11 +1,16 @@
 
+export default function ContactRow({contact, setSelectedContact}){
+    
 
-export default function ContactRow({contact}){
+    function handleClick(){
+       setSelectedContact(contact);
+    }
+    
     return(
-        <tr>
-            <td>{contact.name}</td>
-            <td>{contact.email}</td>
-            <td>{contact.phone}</td>
+        <tr className ='row' onClick={handleClick}>
+         <td>{contact.name}</td>
+         <td>{contact.email}</td>
+         <td>{contact.phone}</td>
         </tr>
-    );
+     );
 }
